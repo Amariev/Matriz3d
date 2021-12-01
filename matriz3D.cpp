@@ -1,6 +1,4 @@
 #include "matriz3D.h"
-#include <cstdlib>
-#include <iostream> 
 
 Matriz3D::Matriz3D()
 {
@@ -19,7 +17,6 @@ Matriz3D::Matriz3D()
 
 Matriz3D::Matriz3D(int x_, int y_, int z_) : x(x_), y(y_), z(z_) 
 {
-  srand(time(NULL));
   this->matriz3D = new int **[x];
   for(int i = 0; i < x ; i++){
     this->matriz3D[i] = new int *[y]{};
@@ -60,16 +57,14 @@ void Matriz3D::imprimirMatriz(){
   }
 }
 
-void Matriz3D::sumaMatrices(Matriz3D a, Matriz3D b) {
-  if(a.getx() == b.getx() && b.getx() == x && a.gety() == b.gety() && b.gety() == y && a.z¿ge:q
-      :wq
-      tz == b.z && b.z == z ){
+void Matriz3D::sumaMatrices(Matriz3D *a, Matriz3D *b) {
+  if(a->getx() == b->getx() && b->getx() == x && a->gety() == b->gety() && b->gety() == y && a->getz() == b->getz() && b->getz() == z ){
     for(int i = 0; i < x ; i++){
       for (int j = 0; j < y; j++) {
         for (int k = 0; k < z; k++) {
-          this->matriz3D[i][j][k] = a.getNumber(i, j , k) + b.getNumber(i, j , k);
+          this->matriz3D[i][j][k] = a->getNumber(i, j , k) + b->getNumber(i, j , k);
         }
       }
     }
-  } else {std::cout << "No se pueden sumar";}
+} else {std::cout << "\nNo se pueden sumar\n";}
 }

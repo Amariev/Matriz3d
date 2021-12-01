@@ -2,6 +2,8 @@
 #define MATRIZ3D_H_
 
 #include <ctime>
+#include <cstdlib>
+#include <iostream> 
 
 class Matriz3D
 {
@@ -19,7 +21,7 @@ class Matriz3D
     inline int getz() {return z;}
 
     void imprimirMatriz();
-    void sumaMatrices(Matriz3D, Matriz3D);
+    void sumaMatrices(Matriz3D *, Matriz3D *);
 };
 
 #endif
