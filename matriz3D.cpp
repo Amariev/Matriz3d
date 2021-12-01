@@ -68,3 +68,13 @@ void Matriz3D::sumaMatrices(Matriz3D *a, Matriz3D *b) {
     }
 } else {std::cout << "\nNo se pueden sumar\n";}
 }
+
+int Matriz3D::getMayoryMenor(int &mayor, int &menor){
+  for(int i = 0; i < x ; i++){
+    for (int j = 0; j < y; j++) {
+      for (int k = 0; k < z; k++) {
+        this->matriz3D[i][j][k] = a->getNumber(i, j , k) + b->getNumber(i, j , k);
+      }
+    }
+  }  
+}
