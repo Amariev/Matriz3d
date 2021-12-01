@@ -43,6 +43,10 @@ Matriz3D::~Matriz3D()
   delete[] matriz3D;
 }
 
+int Matriz3D::getNumber(int x_, int y_ , int z_){
+  return matriz3D[x_][y_][z_];
+}
+
 void Matriz3D::imprimirMatriz(){
   for (int i = 0; i < x; i++) {
     std::cout << "\t Camada n°" << i+1 << std::endl;
@@ -54,4 +58,18 @@ void Matriz3D::imprimirMatriz(){
     }
     std::cout << std::endl;
   }
+}
+
+void Matriz3D::sumaMatrices(Matriz3D a, Matriz3D b) {
+  if(a.getx() == b.getx() && b.getx() == x && a.gety() == b.gety() && b.gety() == y && a.z¿ge:q
+      :wq
+      tz == b.z && b.z == z ){
+    for(int i = 0; i < x ; i++){
+      for (int j = 0; j < y; j++) {
+        for (int k = 0; k < z; k++) {
+          this->matriz3D[i][j][k] = a.getNumber(i, j , k) + b.getNumber(i, j , k);
+        }
+      }
+    }
+  } else {std::cout << "No se pueden sumar";}
 }
