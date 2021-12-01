@@ -4,11 +4,12 @@
 
 Matriz3D::Matriz3D()
 {
-  this->matriz3D = new int **[3];
+  x = 3; y = 4; z =2;
+  this->matriz3D = new int **[x];
   for(int i = 0; i < x ; i++){
-    this->matriz3D[i] = new int *[4];
-    for (int j = 0; j < x; j++) {
-      this->matriz3D[i][j] = new int[2]{};
+    this->matriz3D[i] = new int *[y];
+    for (int j = 0; j < y; j++) {
+      this->matriz3D[i][j] = new int[z];
       for(int k = 0; k < z;k++){
         this->matriz3D[i][j][k] = 0;
       }

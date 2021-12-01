@@ -1,0 +1,2 @@
+language = "bash"
+run = "clang++-7 -Wall -pthread -std=c++17 -o main *.cpp"
