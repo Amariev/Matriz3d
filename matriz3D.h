@@ -12,6 +12,7 @@ class Matriz3D
     int x, y, z;
   public:
     Matriz3D();
+    Matriz3D(Matriz3D &);
     Matriz3D(int, int, int);
     ~Matriz3D();
 
@@ -19,10 +20,15 @@ class Matriz3D
     inline int getx() {return x;}
     inline int gety() {return y;}
     inline int getz() {return z;}
-    int getMayoryMenor(int &, int &);
 
     void imprimirMatriz();
     void sumaMatrices(Matriz3D *, Matriz3D *);
+    int obtenerMayorElemento();
+    int obtenerMenorElemento();
+    void obtenerMayoryMenor(int &, int &);
+    void obtenerIndices(int, int &, int &, int &);
+    int obtenerValor(int, int, int);
+    void insertarValor(int , int, int, int);
 };
 
 #endif
